@@ -5,7 +5,7 @@ from sqlalchemy import Column, Integer, Unicode, Boolean, DateTime, func
 from services.db import Base
 
 
-class ShortenedUrls(Base):
+class ShortenedUrl(Base):
     __tablename__ = "shortened_urls"
 
     id = Column(Integer, primary_key=True, index=True)

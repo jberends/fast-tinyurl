@@ -15,7 +15,7 @@ services:
     ports:
       - "8888:80"
     env_file:
-      - .env
+      - .env.docker
     environment:
       DEBUG: "True"
 
@@ -23,3 +23,5 @@ services:
   postgres:
     image: postgres:latest
     container_name: postgres
+    env_file:
+      - .env.docker

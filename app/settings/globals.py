@@ -10,10 +10,13 @@ config: Config = Config(package_root if package_root.exists() else None)
 APP_NAME: str = "Latex docker microservice"
 APP_VERSION: str = __version__
 
+DATABASE_URL: str = config("DATABASE_URL", cast=str, default="sqlite:///./sql_app.sqlite")
+# DATABASE_URL: str = config("DATABASE_URL", cast=str, default="postgresql://user:pass@localhost/tinyurl")
+
 # Application Root. This is the directory where './app' is in.
 APP_ROOT: Path = Path(__file__).parents[2]
 
-API_PREFIX: str = config("API_PREFIX", cast=str, default="/api")
+API_PREFIX: str = config("API_PREFIX", cast=str, default="/api/v1")
 
 # # Very simple Authentication with API KEY
 # API_KEY: Optional[Secret] = config("API_KEY", cast=Secret, default=None)
@@ -26,7 +29,8 @@ DEBUG: bool = config("DEBUG", cast=bool, default=True)
 
 print(
     f"""
-{package_root=}
+{APP_ROOT=}
 {DEBUG=}
+{DATABASE_URL=}
 """
 )

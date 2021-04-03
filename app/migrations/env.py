@@ -15,7 +15,7 @@ fileConfig(config.config_file_name)
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-# from app.services.models import ShortenedUrls  #noqa
+# from app.services.models import ShortenedUrl  #noqa
 # target_metadata = mymodel.Base.metadata
 # target_metadata = None
 
