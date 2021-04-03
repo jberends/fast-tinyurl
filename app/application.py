@@ -13,12 +13,12 @@ ROUTERS = (heartbeat.router, versions.router)
 
 
 def get_app() -> FastAPI:
-    app = FastAPI(title=APP_NAME, version=APP_VERSION, debug=DEBUG)
+    fast_app = FastAPI(title=APP_NAME, version=APP_VERSION, debug=DEBUG)
 
     for router in ROUTERS:
-        app.include_router(router, prefix=API_PREFIX)
+        fast_app.include_router(router, prefix=API_PREFIX)
 
-    return app
+    return fast_app
 
 
 def get_db():

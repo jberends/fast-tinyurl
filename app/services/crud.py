@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from app.services import models
+from services import models
 
 
 def get_shortened_url(db: Session, short:str):

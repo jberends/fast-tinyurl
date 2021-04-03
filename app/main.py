@@ -3,8 +3,8 @@ from typing import List
 from fastapi import Depends
 from sqlalchemy.orm import Session
 
-from app.services.crud import get_shortened_urls
-from app.services.schemas import ShortenedUrl
+from services.crud import get_shortened_urls
+from services.schemas import ShortenedUrl
 from application import app, get_db  # noqa
 
 

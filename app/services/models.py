@@ -2,7 +2,7 @@ from datetime import datetime
 
 from sqlalchemy import Column, Integer, Unicode, Boolean, DateTime, func
 
-from app.services.db import Base
+from services.db import Base
 
 
 class ShortenedUrls(Base):
