@@ -21,7 +21,9 @@ services:
 
 
   postgres:
-    image: postgres:latest
+    image: postgres:12
     container_name: postgres
+    ports:
+      - "5432:5432"
     env_file:
       - .env.docker
