@@ -1,9 +1,0 @@
-# This is the pip requirements file for package `kems_pdf_generator`
-# Please add your python package requirements in this file
-
-## core requirements
-fastapi
-uvicorn
-pydantic
-sqlalchemy
-alembic
